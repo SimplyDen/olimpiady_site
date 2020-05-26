@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Formular</title>
+	<script>
+		function form(){
+			if(document.form.rok.value==" "&& document.form.mesto.value==" "&& document.form.zeme.value==" " ) 
+			  window.alert("nevyplnil jste pole");
+			else{
+				return false
+			}
+		function over(){
+			if(document.getElementById("vyber").checked==false)
+				window.alert("HYBA")
+			else
+				window.alert("OPPA")
+			}
+			
+	</script>
+	<style>
+	body{
+		background-color: green;
+	}
+	table{
+		border: 4px double black;
+		border-spacing: 7px 11px;
+		background-color: white;
+		position: relative;
+		text-align: left;
+		left: 500px;
+		
+		}
+	h2{
+		position: relative;
+		left:600px;
+		}
+	td{
+		padding: 5px;
+	}
+		input:required {
+		box-shadow:none;
+		}
+		input:invalid {
+		box-shadow:0 0 3px red;
+		}
+		
+	}
+	</style>
+</head>
+<body>
+<h2>Olympiady</h2>
+<form action="zpracuj.php" method="get">
+	<table>
+	<tr><td>Typ olympijcke hry</td>
+		<td>
+		<select name="sezon" class="required">
+			<option value="Letni">Letni
+			<option value="Zimni">Zimni
+		</td>
+		</select>
+	</tr>
+	<tr><td>Rok</td>
+		<td><input type="text" name="rok" required ></td>
+	<tr><td>Pořadatelské město</td>
+		<td><input type="text" name="mesto" required></td>
+	</tr>
+	<tr><td>Země</td>
+		<td><input type="text" name="zeme" required></td>
+	<tr><td>Paralympijské hry ?</td>
+		<td>
+		<input type="radio" name="vyber" value="Ano">Ano
+		<input type="radio" name="vyber" value="Ne">Ne
+		</td>
+		</tr>
+	<tr><td>Olympiada 21 stoleti</td>
+		<td><input type="checkbox" name="check">Ano
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Odeslat">
+			<input type="reset" value="Smazat">
+	</tr>
+	</table>
+	
+
+</body>
+</html>

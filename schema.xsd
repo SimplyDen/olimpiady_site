@@ -1,0 +1,18 @@
+<xs:schema>
+ <xs:element name="zaznam">
+	<xs:sequence>
+	 <xs:element name="id" type="xs:integer"/>
+	 <xs:element name="sezon" type="xs:string"/>
+	 <xs:element name="mesto" type="xs:string"/>
+	 <xs:element name="zeme" type="xs:string"/>
+	 <xs:element name="vyber" type="xs:string"/>
+	 <xs:element name="rok" type="xs:integer"/>
+		<xs:simpleType>
+		<xs:reaction base="xs:integer">
+		  <xs:minInlusive value="0"/>
+		  <xs:maxInlusive value="2100"/>
+		</xs:reaction>
+		</xs:simpleType>
+	</xs:sequence>
+ </xs:element>
+</xs:schema>
